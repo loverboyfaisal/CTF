@@ -63,14 +63,14 @@ gobuster dir -u "http://10.130.135.118:3333/" -w /usr/sahre/wordlist/big.txt
 
 at "http://10.130.135.118:3333/internal/" 
 
-![1](../images/vuln-1_clean.png)
+![image](../../images/vuln-1_clean.png)
 
 # Weaponization
 
 now we need to know which backend language this website written to upload proper webshell.
 So using burpsuite we will catch upload `POST` request then brute force the valid file extension to detect which language to upload .
 
-![1](../images/vuln-2_clean.png)
+![image](../../images/vuln-2_clean.png)
 
 after trying available `php` extensions we found that `phtml` is the proper extension. 
 
@@ -98,10 +98,10 @@ then we will grep webshell
 # Initial access
 after investigate the webshell
 
-![ima](../images/vuln-3_clean.png)
+![image](../../images/vuln-3_clean.png)
 
 now we have a shell. then we will catch it with our attacking machine
-![ima](../images/vuln-4_clean.png)
+![image](../../images/vuln-4_clean.png)
 
 # Privilege Escalation 
 
@@ -140,11 +140,11 @@ systemctl enable --now /tmp/root.service
 
 now we have shell with root privilege let's catch it ...
 
-![1](../images/vuln-5_clean.png)
+![image](.//../images/vuln-5_clean.png)
 
 ## flag
 
-![1](../images/vuln-6_clean.png)
+![image](../../images/vuln-6_clean.png)
 
 
 
