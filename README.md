@@ -6,5 +6,7 @@
 
 [NetSec challenge](Writeups/TryHackMe/Net_Sec_challange.md)
 
-[Linux_vulnersity](Writeups/TryHackMe/Vulnersity.md)
+[Linux=>vulnersity](Writeups/TryHackMe/Vulnersity.md)
+
+[Linux=>kenobi](Writeups/TryHackMe/kenobi.md)
 
