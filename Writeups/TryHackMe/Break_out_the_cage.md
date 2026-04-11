@@ -125,15 +125,15 @@ Finished
 
 After investigating those directories, we found an mp3 file with name `practice_corrupt`. So I'll search about these corrupt files.
 
-![image](../../images/bre-1_clean)
+![image](../../images/bre-1_clean.png)
 
 After some searching, we found that this file uses [audio steganography](https://medium.com/@AungKyawZall/audio-steganography-39f9fb6d9330). This article clarifies how to use spectrogram form to find hidden messages inside this file. Download the file and put it inside [Audacity](https://www.audacityteam.org/download/windows/) and upload the downloaded file inside it.
 
-![image](../../images/bre-2_clean)
+![image](../../images/bre-2_clean.png)
 
 Change to spectrogram:
 
-![image](../../images/bre-3_clean)
+![image](../../images/bre-3_clean.png)
 
 **BANG we found the secret!** The spectrogram view reveals the text "namelesstow" hidden in the audio frequencies.
 
@@ -158,7 +158,7 @@ Password is `Mydadisgxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxirejokes`
 
 We will use this password to login to SSH with username `weston` with the password we found.
 
-![image](../../images/bre-4_clean)
+![image](../../images/bre-4_clean.png)
 
 # Privilege Escalation
 
@@ -225,7 +225,7 @@ attacker$ nc 10.130.181.212 9000
 
 Now we have a shell with the `cage` user:
 
-![image](../../images/bre-5_clean)
+![image](../../images/bre-5_clean.png)
 
 I found a directory under the name `email_backup` which has 3 emails.
 
@@ -295,11 +295,11 @@ The Legend - Cage
 
 There is cryptic plaintext and references to faces. It seems like the same cipher we used to decrypt `weston`'s password. The hint "FACE" is mentioned multiple times, suggesting it's the Vigenere cipher key. Using the same website with key "face", we found understandable text:
 
-![image](../../images/bre-6_clean)
+![image](../../images/bre-6_clean.png)
 
 Sure enough, this is the root password. Let's try it:
 
-![image](../../images/bre-7_clean)
+![image](../../images/bre-7_clean.png)
 
 It worked!
 
@@ -307,8 +307,8 @@ It worked!
 
 User flag inside `Super_Duper_Checklist`:
 
-![image](../../images/bre-8_clean)
+![image](../../images/bre-8_clean.png)
 
 Root flag:
 
-![image](../../images/bre-9_clean)
+![image](../../images/bre-9_clean.png)
