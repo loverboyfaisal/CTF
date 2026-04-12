@@ -12,3 +12,6 @@
 
 [Linux=>startup](Writeups/TryHackMe/Startup.md)
 
+[Cryptography & Linux=>Break out the cage](Writeups/TryHackMe/Break_out_the_cage.md)
+
+
