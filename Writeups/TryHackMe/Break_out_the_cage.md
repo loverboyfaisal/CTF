@@ -1,7 +1,10 @@
 # Overview
 Machine : [Break out the cage](https://tryhackme.com/room/breakoutthecage1)
+
 Platform : [TryHackMe](tryhackme.com)
+
 Difficulty : easy
+
 Category : cryptography , Linux 
 # Enumeration
 
