@@ -71,8 +71,10 @@ HOP RTT     ADDRESS
 1   0.86 ms 10.130.178.254
 ```
 First there is open HTTP server on port 80 let's check it.
-![[Pasted image 20260411152338.png|442]]
-XD , if we watched [Mr.robot](![[Pasted image 20260411152613.png]]) you will understand this joke . Anyways we found first flag .this guy's name in page source code
+![1](../../images/ste-0.png)
+
+*XD , if we watched [Mr.robot](https://www.imdb.com/title/tt4158110/) you will understand this joke, because this guy give f.socity physical access to important datacenter in ep 5 season 1 .* 
+Anyways we found first flag .this guy's name in page source code
 ## flag1
 LOOK AT SOURCE CODE.
 
