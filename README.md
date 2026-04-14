@@ -15,3 +15,5 @@
 [Cryptography & Linux=>Break out the cage](Writeups/TryHackMe/Break_out_the_cage.md)
 
 [Windows=>Steel Mountain](Writeups/TryHackMe/Steel_mountain.md)
+
+[Windows=>Alfredo.md](Writeups/TryHackMe/Alfredo.md)
