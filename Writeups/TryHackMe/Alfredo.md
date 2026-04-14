@@ -57,6 +57,7 @@ After logging in, we need a way to execute remote commands. Jenkins Script Conso
 
 **Steps:**
 1. Navigate to **Manage Jenkins** → **Script Console**
+
 ![1](../../images/alf-1_clean.png)
 
 2. Prepare the reverse shell payload. Download [Invoke-PowerShellTcp.ps1](https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1) from Nishang framework onto your attacker machine.
