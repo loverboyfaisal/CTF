@@ -17,4 +17,4 @@
 
 7. [Windows=>Steel Mountain](Writeups/TryHackMe/Steel_mountain.md)
 
-8. [Windows=>Alfredo.md](Writeups/TryHackMe/Alfredo.md)
+8. [Windows=>Alfred](Writeups/TryHackMe/Alfredo.md)
