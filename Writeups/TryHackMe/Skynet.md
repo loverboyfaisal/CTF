@@ -298,7 +298,7 @@ then catch it with our attacking machine again but on port `9988`
 
 # Privilege escalation
 ## Enumeration
-I found vulnerable kernel version `4.8.0-58-generic` can lead us to privilege escalation. install it on target machine then compile it 
+I found vulnerable kernel version `4.8.0-58-generic` can lead us to privilege escalation through [CVE2017-1000112](https://www.exploit-db.com/exploits/47169). install it on target machine then compile it 
 ```
 $gcc exp.c -o kill
 $./kill
