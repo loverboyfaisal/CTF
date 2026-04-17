@@ -20,3 +20,5 @@
 8. [Windows=>Alfred](Writeups/TryHackMe/Alfredo.md)
 
 9. [Windows=>HackerPark](Writeups/TryHackMe/HackPark.md)
+
+10. [Linux=>Game Zone](Writeups/TryHackMe/Game_Zone.md)
