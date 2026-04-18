@@ -1,5 +1,5 @@
 # CTFs
-![image](https://github.com/user-attachments/assets/268a338a-ee76-485f-89b4-562cc4bb6706)
+![image](images/root_clean.png)
 
 # [Try Hack Me](Writeups/TryHackMe)
 
