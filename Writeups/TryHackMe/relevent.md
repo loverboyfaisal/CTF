@@ -78,34 +78,53 @@ smb: \> ls
   passwords.txt                       A       98  Sat Jul 25 16:15:33 2020
 ```
 Found file called password 
+
 ![image](../../images/rel-1_clean.png)
+
 Obviously it's base64 encoded text we will decode easily.
+
 ![image](../../images/rel-2_clean.png)
+
 Bingo! Decoding the another text we can find that we have to users Bob and Bill each with his own password.
 
 doing directory enumeration on HTTP server port `tcp/49663` we found that we can access file password .
+
 ![image](../../images/rel-3_clean.png)
+
                  http://10.128.171.113:49663/nt4wrksv/passwords.txt
 This lead us to that . we can upload file inside SMB shared file and request it , Sure we will upload shell but we should know precisely which backend language used. Using *wapplayzer* 
+
 ![image](../../images/rel-4_clean.png)
+
 # Weaponization & initial access 
 Using [reverse shell](https://raw.githubusercontent.com/borjmz/aspx-reverse-shell/master/shell.aspx) the upload file via *smbclient* to public shared folder. 
+
 ![image](../../images/rel-5_clean.png)
+
 then request it via browser our curl `http://10.128.142.208:49663/nt4wrksv/service.aspx`
 THEN BINGO!
+
 ![image](../../images/rel-6_clean.png)
+
 **User Flag**
+
 ![image](../../images/rel-7_clean.png)
+
 # Privilege escalation
 ## Enumeration
 Going to writable file which is `C:\Windows\Temp` downloading [winPEAS](https://raw.githubusercontent.com/peass-ng/PEASS-ng/refs/heads/master/winPEAS/winPEASps1/winPEAS.ps1) script on target machine using simple python3 HTTP server to enumeration and running it.
+
 ![image](../../images/rel-8_clean.png)
+
 This is piece of cake for privilege escalation. Searching for exploits we found this [Exploit](https://github.com/itm4n/PrintSpoofer) for it.
 **Exploit it**
 ```
 exp.exe -i -c cmd
 ```
 Bingo!
+
 ![image](../../images/rel-9_clean.png)
+
 **We got root flag**
+
 ![image](../../images/rel-10_clean.png)
