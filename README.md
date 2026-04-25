@@ -26,3 +26,5 @@
 11. [Linux=>Skynet](Writeups/TryHackMe/Skynet.md)
 
 12. [Linux=>Overpass2](Writeups/TryHackMe/overpass2.md)
+
+13. [Windows=>Relevent](Writeups/TryHackMe/relevent.md)
