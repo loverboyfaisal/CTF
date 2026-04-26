@@ -37,16 +37,16 @@ we found this result
 /phpmyadmin           (Status: 301) [Size: 317] [--> http://internal.thm/phpmyadmin/]
 /server-status        (Status: 403) [Size: 277]
 ```
-Doing login for WordPress page
+login to WordPress page
 
 ![image](../../images/int-1_clean.png)
 
-Bad login error handling lead us to username enumeration vulnerability because if we tried another username we found this **message**. 
+Bad login error message handling lead us to username enumeration vulnerability because if we tried another username we will find this **message**. 
 
 ![image](../../images/int-16_clean.png)
 
 
-At this can I will use *wpscan* to do password attack to *admin* user with rockyou.txt 
+At this point I will use *wpscan* to do password attack to *admin* user with rockyou.txt 
 
 ```bash
 wpscan --url http://internal.thm/blog --usernames admin --passwords /usr/share/wordlists/rockyou.txt --max-threads 50
@@ -80,7 +80,9 @@ After running the script we found that file `/opt/wp-save.txt`contain password f
 
 ![image](../../images/int-6_clean.png)
 
-It is repeated pattern in CTF machine when find this type of credentials it is SSH cred. So login to SSH .
+It is repeated pattern in CTF machine when find this type of credentials it is SSH cred.  
+
+**login to SSH...**
 
 Now we have session with user aubreanna 
 
@@ -94,8 +96,8 @@ Also there is file *jenkins.txt*
 
 ![image](../../images/int-9_clean.png)
 
-We have jenkins which automation server to handle (CI/CD) . Let's investigate it. Using magic of tunneling we will tunnel traffic from server to our machine using SSH tunneling. 
-We will open on our machine terminal and make it open port then forward it to port 8080 on target server.
+We have jenkins which is automation server to handle (CI/CD) . Let's investigate it. Using magic of tunneling we will tunnel traffic from server to our machine using SSH tunneling. 
+We will open our machine terminal and establish open port then forward it to port 8080 on target server.
 
 ```bash
 root@:ssh -L 9000:172.17.0.2:8080 aubreanna@10.130.148.115
@@ -107,11 +109,11 @@ Browse `localhost:9000` inside browser and bingo!
 
 ![image](../../images/int-10_clean.png)
 
-Doing simple google search about default credentials user name is *admin* but we did not know the password so we will brute force it using hydra or fuff and rockyou.txt use any tool but the password inside rockyou.txt 
+Doing simple google search about default credentials user name is *admin* but we do not know the password so we will brute force it using hydra or fuff and rockyou.txt use any tool but the password is inside rockyou.txt 
 
 ![image](../../images/int-11_clean.png)
 
-We logged in with admin user maybe this user have higher privileges on system . Anyways jenkins can execute command line inside server . So we will establish reverse shell via Jenkins.
+We logged in with admin user maybe this user have higher privileges on system . Anyways jenkins can execute command line inside target machine. So we will establish reverse shell via Jenkins.
 
 ![image](../../images/int-12_clean.png)
 
@@ -123,7 +125,7 @@ After some enumeration we got this note file inside `/opt`
 
 ![image](../../images/int-14_clean.png)
 
-Auberanna which the user we have access on asks for root privileges for a reason . Go to shell we established before for this user and enter this password
+Auberanna which the user we have access on asks for root privileges for a reason. Going to shell we established before for this user and enter this password
 
 ![image](../../images/int-15_clean.png)
 
