@@ -30,3 +30,5 @@
 13. [Windows=>Relevent](Writeups/TryHackMe/relevent.md)
 
 14. [Linux=>Internal](Writeups/TryHackMe/internal.md)
+
+15. [Linux=>daily bulge](Writeups/TryHackMe/daily_bulge.md)
