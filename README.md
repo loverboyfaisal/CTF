@@ -34,3 +34,5 @@
 15. [Linux=>daily bulge](Writeups/TryHackMe/daily_bulge.md)
 
 16. [Windows=>Retro](Writeups/TryHackMe/retro.md)
+
+17. [Linux=>Basic Pentest](Writeups/TryHackMe/basic_pentest.md)
