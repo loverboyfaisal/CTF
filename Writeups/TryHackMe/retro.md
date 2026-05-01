@@ -24,7 +24,7 @@ Found this directory page with name retro.
     * FUZZ: retro
 ```
 
-![image](ret-1_clean.png)
+![image](../../image/ret-1_clean.png)
 
 Exploring website we will find somewhere Wade user left comment have password inside it.
 
@@ -34,12 +34,12 @@ then based on RDP open service we can finding that this is password for user cal
 Using [WES-NG](https://github.com/bitsadmin/wesng) to find privilege escalation CVE 
 1) Copy target machine *systeminfo*
 
-![image](ret-9_clean.png)
+![image](../../image/ret-9_clean.png)
 
 2) Save it on attack machine then use [*wes-ng*](https://github.com/bitsadmin/wesng) 
 
 Found [CVE-2017-0213](https://github.com/SecWiki/windows-kernel-exploits/blob/master/CVE-2017-0213/CVE-2017-0213_x64.zip) which give privilege escalation.
 
-![image](ret-10_clean.png)
+![image](../../image/ret-10_clean.png)
 
 
